@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BeliProdukActivity">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="129dp"
+            android:layout_height="39dp"
+            android:src="@drawable/cart"/>
+
+        <TextView
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beli Produk Sekarang"
+            android:textAlignment="textEnd"
+            android:textSize="29sp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="9dp"
+        android:backgroundTint="#e4ede8"
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginRight="9dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/order"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDetail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laptop ASUS X453MA"
+                    android:textSize="19dp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/tvDetail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 3.800.000.00-."
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/tvDetail3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi Produk: RAM 4GB, Screen 1366x768 Pixel, Hardisk 500GB,  Intel Core i3"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="9dp"
+        android:backgroundTint="#e4ede8"
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_margin="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spBeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masukan Alamat Lengkap Anda"
+                android:textSize="19sp"/>
+
+            <EditText
+                android:id="@+id/etBeli1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penerima / Atas Nama"
+                android:textSize="19sp"/>
+
+            <EditText
+                android:id="@+id/etBeli2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Barang yang Dibeli"
+                android:textSize="19sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/etBeli3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unit"
+                    android:textAlignment="center"
+                    android:textSize="19sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:background="#5ce3a4"
+        android:layout_margin="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proses Sekarang"
+        android:textSize="29sp"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btnKembali"
+        android:background="#5ce3a4"
+        android:layout_margin="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:textSize="29sp"
+        android:textColor="#fff"/>
+
+</LinearLayout>

@@ -66,16 +66,6 @@
             android:id="@+id/tvList4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="19dp"
-            android:layout_marginRight="19dp"
-            android:text="Deskripsi Produk: "
-            android:textSize="14dp"
-            android:textColor="#000"/>
-
-        <TextView
-            android:id="@+id/tvList5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="19dp"
             android:layout_marginLeft="19dp"
             android:layout_marginRight="19dp"

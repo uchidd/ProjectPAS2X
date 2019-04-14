@@ -1,7 +1,6 @@
 package id.uchidd.projectpas2xaplikasionlineshopelektronik;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,7 +17,6 @@ public class RecylerViewActivity extends AppCompatActivity {
     private ArrayList<String> textList2;
     private ArrayList<String> textList3;
     private ArrayList<String> textList4;
-    private ArrayList<String> textList5;
     private ArrayList<Integer> imageList;
 
     @Override
@@ -38,23 +36,29 @@ public class RecylerViewActivity extends AppCompatActivity {
         textList1 = new ArrayList<>();
         textList1.add("Laptop ASUS X453MA");
         textList1.add("Laptop VAIO Zi832");
+        textList1.add("Laptop ROG GL503GE");
+
         textList2 = new ArrayList<>();
         textList2.add("Rp. 3.800.000.00-.");
         textList2.add("Rp. 4.990.000.00-.");
+        textList2.add("Rp. 14.900.000.00-.");
+
         textList3 = new ArrayList<>();
-        textList3.add("Deskripsi Produk: RAM 4GB, Screen 1366x768 Pixel,");
-        textList3.add("Deskripsi Produk: RAM 8GB, Screen 1366x768 Pixel,");
+        textList3.add("Deskripsi Produk: RAM 4GB, Screen 1366x768 Pixel, Harddisk 500GB, Intel Core i3");
+        textList3.add("Deskripsi Produk: RAM 8GB, Screen 1366x768 Pixel, Harddisk 1TB, Intel Core i7");
+        textList3.add("Deskripsi Produk: RAM 8GB, Screen 1366x768 Pixel, Harddisk 1TB, Intel Core i7");
+
         textList4 = new ArrayList<>();
-        textList4.add("Harddisk 500GB, Intel Core i3");
-        textList4.add("Harddisk 1TB, Intel Core i7");
-        textList5 = new ArrayList<>();
-        textList5.add("Diskon 10% Jika Pembelian Lebih Dari 5 Unit");
-        textList5.add("Diskon 10% Jika Pembelian Lebih Dari 5 Unit");
+        textList4.add("Diskon 10% Jika Pembelian Lebih Dari 5 Unit");
+        textList4.add("Diskon 10% Jika Pembelian Lebih Dari 5 Unit");
+        textList4.add("Diskon 10% Jika Pembelian Lebih Dari 5 Unit");
+
         imageList = new ArrayList<>();
         imageList.add(R.drawable.list1);
         imageList.add(R.drawable.list2);
+        imageList.add(R.drawable.list3);
 
-        RecyclerView.Adapter adapter = new AdapterList(textList1, textList2, textList3, textList4, textList5, imageList);
+        RecyclerView.Adapter adapter = new AdapterList(textList1, textList2, textList3 , textList4, imageList);
         rvList.setAdapter(adapter);
 
         rvList.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
@@ -72,17 +76,16 @@ public class RecylerViewActivity extends AppCompatActivity {
                 if (child != null && gestureDetector.onTouchEvent(motionEvent)) {
                     int position = rvList.getChildAdapterPosition(child);
 
-                    String text1, text2, text3, text4, text5;
+                    String text1, text2, text3, text4;
                     Integer image;
 
                     text1 = textList1.get(position);
-                    text2 = textList1.get(position);
-                    text3 = textList1.get(position);
-                    text4 = textList1.get(position);
-                    text5 = textList1.get(position);
+                    text2 = textList2.get(position);
+                    text3 = textList3.get(position);
+                    text4 = textList4.get(position);
                     image = imageList.get(position);
 
-                    pushData(text1, text2, text3, text4, text5, image);
+                    pushData(text1, text2, text3, text4, image);
 
                 }
 
@@ -102,14 +105,13 @@ public class RecylerViewActivity extends AppCompatActivity {
 
     }
 
-    private void pushData(String text1, String text2, String text3, String text4, String text5, Integer image) {
+    private void pushData(String text1, String text2, String text3, String text4, Integer image) {
 
         Bundle bundle = new Bundle();
-        bundle.putString("TEXT 1", text1);
-        bundle.putString("TEXT 2", text2);
-        bundle.putString("TEXT 3", text3);
-        bundle.putString("TEXT 4", text4);
-        bundle.putString("TEXT 5", text5);
+        bundle.putString("TXT1", text1);
+        bundle.putString("TXT2", text2);
+        bundle.putString("TXT3", text3);
+        bundle.putString("TXT4", text4);
         bundle.putInt("IMAGE", image);
 
         Intent goToDetailProduk = new Intent(this, DetailProdukActivity.class);
@@ -122,7 +124,7 @@ public class RecylerViewActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(RecylerViewActivity.this, MainActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 }

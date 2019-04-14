@@ -1,7 +1,5 @@
 package id.uchidd.projectpas2xaplikasionlineshopelektronik;
 
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,17 +17,15 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     ArrayList<String> text2;
     ArrayList<String> text3;
     ArrayList<String> text4;
-    ArrayList<String> text5;
     ArrayList<Integer> image;
 
-    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<String> text4, ArrayList<String> text5, ArrayList<Integer> image){
+    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3 , ArrayList<String> text4, ArrayList<Integer> image){
 
         this.image = image;
         this.text1 = text1;
         this.text2 = text2;
         this.text3 = text3;
         this.text4 = text4;
-        this.text5 = text5;
 
     }
 
@@ -48,7 +44,6 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
         viewHolder.tvText2.setText(text2.get(i));
         viewHolder.tvText3.setText(text3.get(i));
         viewHolder.tvText4.setText(text4.get(i));
-        viewHolder.tvText5.setText(text5.get(i));
         Picasso.get().load(image.get(i)).into(viewHolder.ivImage);
 
     }
@@ -65,7 +60,6 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
         private TextView tvText2;
         private TextView tvText3;
         private TextView tvText4;
-        private TextView tvText5;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -74,7 +68,6 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
             tvText2 = (TextView)itemView.findViewById(R.id.tvList2);
             tvText3 = (TextView)itemView.findViewById(R.id.tvList3);
             tvText4 = (TextView)itemView.findViewById(R.id.tvList4);
-            tvText5 = (TextView)itemView.findViewById(R.id.tvList5);
         }
     }
 }
