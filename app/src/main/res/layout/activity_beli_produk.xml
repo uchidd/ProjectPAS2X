@@ -145,6 +145,7 @@
                 android:orientation="horizontal">
 
                 <EditText
+                    android:inputType="number"
                     android:layout_weight="1"
                     android:id="@+id/etBeli3"
                     android:layout_width="match_parent"
@@ -165,21 +166,12 @@
     </android.support.v7.widget.CardView>
 
     <Button
+        android:id="@+id/btnProses"
         android:background="#5ce3a4"
         android:layout_margin="9dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Proses Sekarang"
-        android:textSize="29sp"
-        android:textColor="#fff"/>
-
-    <Button
-        android:id="@+id/btnKembali"
-        android:background="#5ce3a4"
-        android:layout_margin="9dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kembali"
         android:textSize="29sp"
         android:textColor="#fff"/>
 

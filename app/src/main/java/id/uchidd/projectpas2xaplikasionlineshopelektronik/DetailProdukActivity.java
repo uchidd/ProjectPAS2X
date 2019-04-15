@@ -37,30 +37,30 @@ public class DetailProdukActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Bundle getData = getIntent().getExtras();
-        final String getText1 = getData.getString("TXT1");
-        final String getText2 = getData.getString("TXT2");
-        final String getText3 = getData.getString("TXT3");
-        final String getText4 = getData.getString("TXT4");
-        final Integer getImage = getData.getInt("IMAGE");
+         final String getText1 = getData.getString("TXT1");
+         final String getText2 = getData.getString("TXT2");
+         final String getText3 = getData.getString("TXT3");
+         final String getText4 = getData.getString("TXT4");
+         final Integer getImage = getData.getInt("IMAGE");
 
         Picasso.get().load(getImage).into(ivDetail);
         tvDetail1.setText(getText1);
-        tvDetail2.setText(getText2);
+        tvDetail2.setText("Rp. " + getText2 + "-,");
         tvDetail3.setText(getText3);
         tvDetail4.setText(getText4);
 
         btnBeli.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {/*
+            public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("TEXT 1", getText1);
-                bundle.putString("TEXT 2", getText2);
-                bundle.putString("TEXT 3", getText3);
-                bundle.putString("TEXT 4", getText4);
-                bundle.putInt("IMAGE", getImage);*/
+                bundle.putString("TXT1", getText1);
+                bundle.putString("TXT2", getText2);
+                bundle.putString("TXT3", getText3);
+                bundle.putString("TXT4", getText4);
+                bundle.putInt("IMAGE", getImage);
 
                 Intent goToBeliProduk = new Intent(DetailProdukActivity.this, BeliProdukActivity.class);
-//                goToDetailProduk.putExtras(bundle);
+                goToBeliProduk.putExtras(bundle);
                 startActivity(goToBeliProduk);
             }
         });
@@ -78,6 +78,5 @@ public class DetailProdukActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(DetailProdukActivity.this, RecylerViewActivity.class));
-        finish();
     }
 }

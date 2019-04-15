@@ -41,7 +41,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
 
         viewHolder.tvText1.setText(text1.get(i));
-        viewHolder.tvText2.setText(text2.get(i));
+        viewHolder.tvText2.setText("Rp. " + text2.get(i) + "-,");
         viewHolder.tvText3.setText(text3.get(i));
         viewHolder.tvText4.setText(text4.get(i));
         Picasso.get().load(image.get(i)).into(viewHolder.ivImage);

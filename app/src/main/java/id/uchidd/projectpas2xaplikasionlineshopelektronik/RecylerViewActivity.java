@@ -39,9 +39,9 @@ public class RecylerViewActivity extends AppCompatActivity {
         textList1.add("Laptop ROG GL503GE");
 
         textList2 = new ArrayList<>();
-        textList2.add("Rp. 3.800.000.00-.");
-        textList2.add("Rp. 4.990.000.00-.");
-        textList2.add("Rp. 14.900.000.00-.");
+        textList2.add("3800000");
+        textList2.add("4990000");
+        textList2.add("14900000");
 
         textList3 = new ArrayList<>();
         textList3.add("Deskripsi Produk: RAM 4GB, Screen 1366x768 Pixel, Harddisk 500GB, Intel Core i3");
